@@ -1,5 +1,5 @@
 uvicorn
 fastapi
 aiofiles
-docker
+aiodocker
 websockets

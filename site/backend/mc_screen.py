@@ -1,24 +1,24 @@
-import docker
 import logging
 
-from fastapi import WebSocket
+from aiodocker import Docker
+
+from fastapi import WebSocket, WebSocketDisconnect
 logger = logging.getLogger("MC")
 
 CONTAINER_NAME = "mc_server"
 
 async def manage_mc(websocket: WebSocket):
-    client = docker.from_env()
+    client = Docker()
     try:
-        container = client.containers.get(CONTAINER_NAME)
-        tail = container.logs(tail=100).decode('utf-8')
-        for log in tail.split("\n"):
+        container = await client.containers.get(CONTAINER_NAME)
+        tail = await container.log(tail=100, stderr=True, stdout=True)
+
+        for log in tail:
             await websocket.send_text(log)
 
-        for line in container.logs(stream=True, follow=True, tail=0):
-            log_line = line.decode('utf-8').strip()
-            await websocket.send_text(log_line)
-
-    except Exception:
-        pass
+        async for line in container.log(stream=True, follow=True, tail=0, stderr=True, stdout=True):
+            await websocket.send_text(line)
+    except WebSocketDisconnect:
+        logger.info("Stop manage...")
     finally:
-        client.close()
+        await client.close()

@@ -1,8 +1,10 @@
 const sock_url = "ws" + window.ENV.API_URL.slice(4);
 let console_window = document.createElement("div");
+let socket = null;
 
 function setup_rcon() {
-  const socket = new WebSocket(`${sock_url}/rcon`);
+  if (socket) socket.close();
+  socket = new WebSocket(`${sock_url}/rcon`);
 
   socket.onopen = (e) => {
     console.log("Соединение установлено");
