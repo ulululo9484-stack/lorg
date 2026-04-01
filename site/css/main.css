@@ -1,0 +1,83 @@
+:root {
+    --background-color: rgb(36, 34, 34);
+    --text-color: rgb(255, 255, 255);
+    --backplate-color: rgb(72, 67, 67);
+
+    --field-color: rgb(111, 111, 111);
+
+    --button-primary: rgb(120, 119, 119);
+    --button-primary-hover: rgb(142, 142, 142);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+#admin_panel {
+    position: absolute;
+    left: 37%;
+    top: 38%;
+
+    background-color: var(--backplate-color);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 25%;
+    padding: 10px;
+    align-items: center;
+}
+
+h1 {
+    color: var(--text-color);
+    font-family: "Comic Sans MS", cursive;
+}
+
+h2 {
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3 {
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    width: 30%;
+    border-radius: 5px;
+    height: 30px;
+    background-color: var(--button-primary);
+    border: none;
+    transition: linear 0.2s;
+    color: var(--text-color);
+}
+
+button:hover {
+    background-color: var(--button-primary-hover);
+    transition: linear 0.2s;
+}
+label {
+    color: var(--text-color);
+    font-family: "Comic Sans MS", monospace;
+}
+
+input {
+    color: white;
+    width: 80%;
+    height: 30px;
+    background-color: var(--field-color);
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+}
