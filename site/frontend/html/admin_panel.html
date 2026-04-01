@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <script src="../config.js"></script>
+    
+</head>
+<body>
+    <header id="header">
+        <div>
+            <h1>Admin panel</h1>
+            <a href="../index.html">На сайт</a>
+        </div>
+    </header>
+    <div id="tools">
+        <div id="stats">Статистика</div>
+        <div id="console">Консоль</div>
+        <div id="requests">Заявки</div>
+        <div id="subs">Подписки</div>
+        <div id="bans">Баны</div>
+    </div>
+    <div id="tool-content">
+    </div>
+</body>
+<script src="../js/tool_switch.js"></script>
+<script src="../js/admin_panel.js"></script>
+<script>switch_tool("console");</script>
+</html>

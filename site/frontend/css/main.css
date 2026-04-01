@@ -1,55 +1,39 @@
 :root {
+    margin: 0;
+
     --background-color: rgb(36, 34, 34);
     --text-color: rgb(255, 255, 255);
-    --backplate-color: rgb(72, 67, 67);
+    --backplate-color: rgb(72, 72, 72);
+    --backplate-border: rgb(80, 80, 80);
 
     --field-color: rgb(111, 111, 111);
 
     --button-primary: rgb(120, 119, 119);
     --button-primary-hover: rgb(142, 142, 142);
+
+    --button-secondary: rgb(67, 67, 67);
+    --button-secondary-hover: rgb(88, 88, 88);
+
 }
 
 body {
     background-color: var(--background-color);
-}
+    color: var(--text-color);
 
-#admin_panel {
-    position: absolute;
-    left: 37%;
-    top: 38%;
-
-    background-color: var(--backplate-color);
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 25%;
-    padding: 10px;
-    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    color: var(--text-color);
     font-family: "Comic Sans MS", cursive;
 }
 
 h2 {
-    color: var(--text-color);
     font-family: 'Courier New', Courier, monospace;
 }
 
 h3 {
-    color: var(--text-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-p {
-    color: var(--text-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-a {
-    color: var(--text-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 

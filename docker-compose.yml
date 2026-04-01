@@ -1,0 +1,5 @@
+services:
+  backend:
+    build: site
+    ports:
+      - 8000:8000
