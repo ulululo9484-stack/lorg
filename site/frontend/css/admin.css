@@ -1,18 +1,3 @@
-#admin_panel {
-    position: absolute;
-    left: 37%;
-    top: 38%;
-
-    background-color: var(--backplate-color);
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 25%;
-    padding: 10px;
-    align-items: center;
-}
-
 header {
     position: sticky;
     top: 0;
@@ -42,6 +27,21 @@ header a {
     top: 35%;
     text-decoration-line: none;
     color: var(--text-color);
+}
+
+#admin_panel {
+    position: absolute;
+    left: 37%;
+    top: 38%;
+
+    background-color: var(--backplate-color);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 25%;
+    padding: 10px;
+    align-items: center;
 }
 
 #tools {
