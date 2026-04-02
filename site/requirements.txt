@@ -3,3 +3,4 @@ fastapi
 aiofiles
 aiodocker
 websockets
+rcon

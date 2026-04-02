@@ -12,5 +12,6 @@ services:
       - EULA=TRUE
       - TYPE=PAPER
       - VERSION=1.20.1
+      - RCON_PASSWORD=password
     volumes:
       - ./data:/data

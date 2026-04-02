@@ -1,10 +1,9 @@
 import logging
-
 from aiodocker import Docker
-
 from fastapi import WebSocket, WebSocketDisconnect
-logger = logging.getLogger("MC")
+from rcon.source import rcon
 
+logger = logging.getLogger("MC")
 CONTAINER_NAME = "mc_server"
 
 async def manage_mc(websocket: WebSocket):
@@ -22,3 +21,14 @@ async def manage_mc(websocket: WebSocket):
         logger.info("Stop manage...")
     finally:
         await client.close()
+
+async def execute_mc(command: str):
+    password = "password"
+    port = 25575
+
+    return await rcon(
+        command,
+        host=CONTAINER_NAME,
+        port=port,
+        passwd=password
+    )

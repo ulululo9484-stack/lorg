@@ -1,7 +1,7 @@
 const tool_container = document.getElementById("tool-content");
 
 const setups = {
-    "console": setup_rcon
+    "console": setup_console
 }
 
 async function switch_tool(tool_name) {
