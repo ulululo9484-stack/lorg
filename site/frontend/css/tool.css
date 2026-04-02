@@ -2,7 +2,7 @@
     padding: 10px;
 }
 
-#console {
+#console-block {
     overflow-y: auto;
     font-family: monospace;
     font-size: 10px;
@@ -15,6 +15,11 @@
     padding: 2px;
     margin: 0px;
     background-color: black;
+}
+
+#console-window p {
+    padding: 0;
+    margin: 0;
 }
 
 #command-line {
