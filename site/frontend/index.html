@@ -1,19 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lorg</title>
+    <title>Lorg — Minecraft сервер</title>
 
     <link rel="stylesheet" href="css/main.css">
 
     <script src="../config.js"></script>
 </head>
 <body>
-    <h1>Lorg server!</h1>
-    <h2>Lorg server!</h2>
-    <h3>Lorg server!</h3>
-    <p>Tralalelo tralala</p>
-    <a href="html/admin_singin.html" target="_self">ADMIN PANEL</a>
+    <header class="hero">
+        <nav class="top-nav">
+            <div class="logo">Lorg</div>
+            <a class="nav-link" href="html/admin_singin.html" target="_self">Админ-панель</a>
+        </nav>
+
+        <div class="hero-content">
+            <p class="eyebrow">PRIVATE MINECRAFT COMMUNITY</p>
+            <h1>Lorg server</h1>
+            <p class="subtitle">
+                Небольшой, уютный сервер с акцентом на дружелюбное комьюнити,
+                ивенты и стабильную игру без лишнего хаоса.
+            </p>
+
+            <div class="hero-actions">
+                <a class="button primary" href="#connect">Как зайти</a>
+                <a class="button secondary" href="#features">Что внутри</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="connect" class="card">
+            <h2>Подключение</h2>
+            <p>IP сервера: <span class="accent">play.lorg.local</span></p>
+            <p>Версия: <span class="accent">1.20.x</span></p>
+            <p>Режим: <span class="accent">Survival + Events</span></p>
+        </section>
+
+        <section id="features" class="features-grid">
+            <article class="card">
+                <h3>Честная игра</h3>
+                <p>Активная модерация и прозрачные правила для комфортной игры.</p>
+            </article>
+
+            <article class="card">
+                <h3>Ивенты</h3>
+                <p>Регулярные активности: PvP-турниры, квесты и сезонные челленджи.</p>
+            </article>
+
+            <article class="card">
+                <h3>Экономика</h3>
+                <p>Игровой рынок и прокачка без pay-to-win механик.</p>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
